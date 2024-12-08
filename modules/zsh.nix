@@ -3,8 +3,8 @@
   programs.zsh = {
     enable = true;
 
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
 
     initExtra = ''
       if [[ -o interactive ]]; then
