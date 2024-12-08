@@ -2,11 +2,28 @@
 {
   programs.git = {
     enable = true;
+    delta.options = {
+      line-numbers = true;
+      side-by-side = true;
+      navigate = true;
+    };
     userName = "Johan Hanses";
     userEmail = "johanhanses@gmail.com";
     delta.enable = true;
-    extraConfig.init.defaultBranch = "main";
-    extraConfig.pull.rebase = false;
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+      pull = {
+        rebase = false;
+      };
+      merge = {
+        conflictstyle = "diff3";
+      };
+      diff = {
+        colorMoved = "default";
+      };
+    };
     ignores = [
       ".DS_Store"
       ".AppleDouble"
