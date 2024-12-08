@@ -1,4 +1,6 @@
 {
+  description = "NixOS WSL Configuration";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 
