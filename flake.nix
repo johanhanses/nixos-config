@@ -35,7 +35,10 @@
               autoPrune.enable = true;
             };
             # Add your user to docker group
-            users.users.johanhanses.extraGroups = [ "docker" ];
+            users.users.johanhanses = {
+              isNormalUser = true;
+              extraGroups = [ "docker" "wheel" ];  # wheel group for sudo access
+            };
 
             # System-wide packages
             environment.systemPackages = with pkgs; [
@@ -68,6 +71,11 @@
             programs.nix-ld = {
               enable = true;
               package = pkgs.nix-ld-rs;
+              libraries = with pkgs; [
+                stdenv.cc.cc
+                openssl
+                # Add other libraries if needed
+              ];
             };
           })
 
