@@ -7,6 +7,7 @@
     ./modules/zsh.nix
     ./modules/starship.nix
     ./modules/ssh.nix
+    ./modules/nvim.nix
   ];
 
   home.username = "johanhanses";

@@ -2,7 +2,6 @@
 {
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    neovim
     nodejs_22
     neofetch
     nnn # terminal file manager

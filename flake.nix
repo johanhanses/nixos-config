@@ -10,9 +10,14 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixos-wsl, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, nixos-wsl, home-manager, nixvim, ... }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
@@ -78,6 +83,10 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.johanhanses = import ./home.nix;
+            # Pass nixvim to home-manager
+            home-manager.extraSpecialArgs = {
+              inherit nixvim;
+            };
           }
         ];
       };
