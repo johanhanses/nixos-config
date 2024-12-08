@@ -21,11 +21,23 @@
             users.defaultUserShell = pkgs.zsh;
             programs.zsh.enable = true;
 
+            # Enable Docker
+            virtualisation.docker = {
+              enable = true;
+              # Optional: Enable docker daemon on startup
+              enableOnBoot = true;
+              # Add your user to docker group
+              autoPrune.enable = true;
+            };
+            # Add your user to docker group
+            users.users.johanhanses.extraGroups = [ "docker" ];
+
             # System-wide packages
             environment.systemPackages = with pkgs; [
               wget
               # Add nodejs for VSCode remote server compatibility
               nodejs_18
+              docker-compose
             ];
 
             # VSCode remote server compatibility
