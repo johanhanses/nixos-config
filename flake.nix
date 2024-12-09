@@ -46,6 +46,7 @@
               # Add nodejs for VSCode remote server compatibility
               nodejs_18
               docker-compose
+               (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
             ];
 
             # VSCode remote server compatibility

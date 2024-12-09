@@ -9,6 +9,11 @@
       aws.disabled = true;
       gcloud.disabled = true;
       line_break.disabled = true;
+
+      os = {
+        disabled =  false;
+        style = "bold yellow";
+      };
     };
   };
 }

@@ -7,6 +7,13 @@
     autosuggestion.enable = true;
 
     initExtra = ''
+      # Enable proper UTF-8 support
+      export LANG=en_US.UTF-8
+      export LC_ALL=en_US.UTF-8
+
+      # Enable proper terminal colors
+      export TERM=xterm-256color
+
       if [[ -o interactive ]]; then
         export SHELL=${pkgs.zsh}/bin/zsh
       fi
@@ -25,7 +32,7 @@
       XDG_CONFIG_HOME = "$HOME/.config";
       REPOS = "$HOME/Repos";
       GITUSER = "johanhanses";
-      GHREPOS = "$REPOS/github.com/$GITUSER";
+      GHREPOS = "$HOME/Repos/github.com/johanhanses";
       DOTFILES = "$GHREPOS/dotfiles";
       SCRIPTS = "$DOTFILES/scripts";
       SECOND_BRAIN = "$GHREPOS/zettelkasten";
