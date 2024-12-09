@@ -80,6 +80,7 @@
       la = "ls -lathr";
       e = "exit";
       gm = "git checkout main && git pull";
+      gd = "git diff";
       gp = "git push";
       ga = "git add .";
       gs = "git status";
