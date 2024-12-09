@@ -24,11 +24,14 @@
         ssh-add ~/.ssh/id_ed25519
         ssh-add ~/.ssh/dt-install-key
       fi
+
+      # Add npm global bin to PATH
+      export PATH="$HOME/.npm-global/bin:$PATH"
     '';
 
     sessionVariables = {
       EDITOR = "nvim";
-      VISUAL = "code";
+      VISUAL = "nvim";
       XDG_CONFIG_HOME = "$HOME/.config";
       REPOS = "$HOME/Repos";
       GITUSER = "johanhanses";
