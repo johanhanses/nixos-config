@@ -19,5 +19,6 @@
     plugins.lightline.enable = true;
     plugins.lualine.enable = true;
     plugins.telescope.enable = true;
+    plugins.web-devicons.enable = true;
   };
 }
