@@ -4,7 +4,7 @@
     enable = true;
     delta.options = {
       line-numbers = true;
-      side-by-side = true;
+#      side-by-side = true;
       navigate = true;
     };
     userName = "Johan Hanses";
@@ -16,6 +16,10 @@
       };
       pull = {
         rebase = false;
+      };
+      push = {
+	autoSetupRemote = true;
+	default = "current";
       };
       merge = {
         conflictstyle = "diff3";
