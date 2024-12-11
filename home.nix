@@ -11,6 +11,8 @@
     ./modules/fzf.nix
   ];
 
+  programs.eza.enable = true;
+  
   home.username = "johanhanses";
   home.homeDirectory = "/home/johanhanses";
   home.stateVersion = "24.11";

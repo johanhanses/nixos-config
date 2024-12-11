@@ -75,8 +75,8 @@
       nr = "npm run";
       ns = "npm start";
       ls = "ls --color=auto";
-      ll = "ls -la";
-      l = "ls -l";
+      ll = "eza -l -a -a -g --group-directories-first --show-symlinks --icons=always";
+      l = "eza -l -g --group-directories-first --show-symlinks --icons=always";
       la = "ls -lathr";
       e = "exit";
       gm = "git checkout main && git pull";
